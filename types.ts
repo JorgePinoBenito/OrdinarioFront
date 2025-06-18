@@ -1,10 +1,21 @@
-import { OptionalId } from "mongodb";
-
-export type Contact = {
-  id: string;
+export type DataTodos = {
+  id: number;
   name: string;
-  phone: string;
-  email: string;
-}
+  image: string;
+};
 
-export type ContactDB = OptionalId<Omit<Contact,"id">>;
+export type ResultsTodos = {
+  results: DataTodos[];
+};
+
+export type DataCharacter = {
+  id: number;
+  name: string;
+  image: string;
+  house: string;
+  alive: boolean;
+};
+
+export type ResultsCharacter = {
+  results: DataCharacter[];
+};
